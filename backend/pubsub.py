@@ -4,11 +4,15 @@ from pubnub.callbacks import SubscribeCallback  # type: ignore
 import time
 from backend.blockchain.block import Block
 from backend.wallet.transactions import Transactions
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
 pnconfig = PNConfiguration()
-pnconfig.subscribe_key = 'sub-c-6e1f51d2-c4a0-4a22-8e68-369e3ca99369'
-pnconfig.publish_key = 'pub-c-2cdc1e8b-3f10-4a68-87a1-6bacf5b33d73'
+pnconfig.subscribe_key = os.getenv("SUBSCRIBE_KEY")
+pnconfig.publish_key = os.getenv("PUBLISH_KEY")
+
 
 CHANNELS = {
     'TEST': 'TEST',

@@ -1,3 +1,8 @@
+**Create virtual environment first in projects directory**
+"""
+python -m venv blockchain-venv
+"""
+
 **Activate the virtual environment through windows terminal**
 """
 blockchain-env/Scripts/activate
@@ -23,7 +28,7 @@ python -m backend.app
 """
 
 **Run a peer instance**
-make sure to activate virtual environment
+make sure to activate virtual environment and backend is already running
 """
 pip install --upgrade urllib3 requests
 $env:PEER="True"; python -m backend.app
