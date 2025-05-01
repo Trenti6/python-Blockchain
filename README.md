@@ -5,7 +5,7 @@
 
 ## Activate the virtual environment through windows terminal
 
-    blockchain-env/Scripts/activate
+    blockchain-venv/Scripts/activate
 
 
 ## Install all packages
